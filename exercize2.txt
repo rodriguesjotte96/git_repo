@@ -1,0 +1,6 @@
+1 NF: 	db(Staffno*, dentistname, patientno, patientname, date*, time*, surgeryno)
+2 NF: 	snaffno* + dentistname
+	patientno* + patientname +date*time* patientno, staffno, surgeryno 
+3 NF: 	staffno* + dentistname            
+        patientno* + patientname 
+	date*time* patientno, staffno, surgeryno
