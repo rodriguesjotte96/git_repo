@@ -1,0 +1,19 @@
+1NF: no repeating groups, primary key defined 
+	pt no*, full name, ward nr, ward name,  drug nr*, drug name, ddrug descr, drug dosage, method of admin, units per day, start date*, finish date
+
+2NF: no partial dependencies
+	patient(ptno*, full name, ward nr, ward name)
+	drug(drug nr*, drug name, drug descr, drug dosage, method of admin)
+	prescr(pt no*, drug nr*, units, start date*, finish date)
+3NF: no transitive dependencies of non keys  
+	ptno full name wardno bed
+	ward no ward name 
+	drug(as above)
+	prescr(as above)
+
+The database is in BCNF because, in every relation, all functional dependencies have a determinant that is a candidate key. 
+There are no partial or transitive dependencies, 
+and no non-key attribute determines another attribute.
+
+
+	
